@@ -2,7 +2,7 @@ import pandas as pd
 import itertools
 import operator
 
-inp_file = 'paper review - final_edit_this_if_needed.csv'
+inp_file = 'paper review.csv'
 
 # read file and remove unincluded papers
 df = pd.read_csv(inp_file)
