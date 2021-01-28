@@ -19,7 +19,7 @@ for c in columns[:-1]:
     df[c] = df[c].str.split(',')
 
 # transfrom null values to string/lists of string
-df.loc[df[columns[5]].isnull(),[columns[5]] = df.loc[
+df.loc[df[columns[5]].isnull(),[columns[5]]] = df.loc[
     df[columns[5]].isnull(),columns[5]].apply(lambda x: ['NA'])
 df.loc[df[columns[-1]].isna(), [columns[-1]]] = 'NA'
 
@@ -68,6 +68,7 @@ continent_rows = []
 for idx, row in df.iterrows():
     continent_rows.append(list(set([study_area_continent[i] for i in row[columns[5]]])))
 df['Study Area Geography (continent)'] = continent_rows
+columns.append('Study Area Geography (continent)')
 
 # create Table 3
 tab3 = pd.DataFrame(columns=['variable','value','papers','%'])
