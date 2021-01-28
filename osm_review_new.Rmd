@@ -1,0 +1,324 @@
+---
+title: "OSM community literature review"
+always_allow_html: yes
+output:
+  html_document:
+    df_print: paged
+    fig_caption: yes
+  pdf_document: 
+    fig_caption: yes
+---
+
+### Setting up the environment
+
+```{r functions, include=FALSE}
+# A function for captioning and referencing images
+fig <- local({
+    i <- 0
+    ref <- list()
+    list(
+        cap=function(refName, text) {
+            i <<- i + 1
+            ref[[refName]] <<- i
+            paste("Figure ", i, ": ", text, sep="")
+        },
+        ref=function(refName) {
+            ref[[refName]]
+        })
+})
+```
+
+
+```{r setup,include=F}
+if (!require('ggplot2')) {
+  install.packages('ggplot2')
+  library('ggplot2')
+}
+if (!require('circlize')) {
+  install.packages('circlize')
+  library('circlize')
+}
+if (!require('grid')) {
+  install.packages('grid')
+  library('grid')
+}
+if (!require('gridExtra')) {
+  install.packages('gridExtra')
+  library('gridExtra')
+}
+if (!require('ggmap')) {
+  install.packages('ggmap')
+  library('ggmap')  
+}
+if (!require('maps')) {
+  install.packages('maps')
+  library('maps')  
+}
+if (!require('mapdata')) {
+  install.packages('mapdata')
+  library('mapdata')  
+}
+if (!require('sf')) {
+  install.packages('sf')
+  library('sf')  
+}
+if (!require('rgeos')) {
+  install.packages('rgeos')
+  library('rgeos')  
+}
+if (!require('rnaturalearth')) {
+  install.packages('rnaturalearth')
+  library('rnaturalearth')  
+}
+if (!require('rnaturalearthdata')) {
+  install.packages('rnaturalearthdata')
+  library('rnaturalearthdata')  
+}
+if (!require('plyr')) {
+  install.packages('plyr')
+ library('plyr')  
+}
+if (!require('dplyr')) {
+  install.packages('dplyr')
+ library('dplyr')  
+}
+if (!require('reshape2')) {
+  install.packages('reshape2')
+  library('reshape2')
+}
+if (!require('data.table')) {
+  install.packages('data.table')
+  library('data.table')
+}
+if (!require('tm')) {
+  install.packages('tm')
+  library("tm")
+}
+if (!require('SnowballC')) {
+  install.packages('SnowballC')
+  library("SnowballC")
+}
+if (!require('wordcloud2')) {
+  install.packages('wordcloud2')
+  library("wordcloud2")
+}
+if (!require('RColorBrewer')) {
+  install.packages('RColorBrewer')
+  library("RColorBrewer")
+}
+if (!require('waffle')) {
+  install.packages('waffle')
+  library("waffle")
+}
+
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+
+```
+
+Output not included. Check markdown.
+
+### Read an transform data
+
+```{r}
+raw_papers <- read.csv('OSM_Paper_Review.csv', header=T, stringsAsFactors=F)
+
+```
+
+Convert data frame to list, also split comma and semicolon separated values to vectors.
+
+```{r}
+paper_list <- split(raw_papers, seq(nrow(raw_papers)))
+
+for (paper in seq_along(paper_list)) {
+  # Use an ugly, ineffective regex to split string by 2 delimiters.
+  paper_list[[paper]]$Authors..Geography..countries. <- strsplit(paper_list[[paper]]$Authors..Geography..countries., '\\,|\\;|\\, | \\; ')
+  paper_list[[paper]]$Authors..Geography..continents. <- strsplit(paper_list[[paper]]$Authors..Geography..continents., '\\,|\\;|\\, | \\; ')
+  paper_list[[paper]]$Study.Area.Geography..countries. <- strsplit(paper_list[[paper]]$Study.Area.Geography..countries., '\\,|\\;|\\, | \\; ')
+  paper_list[[paper]]$Evidence.of.engagement <- strsplit(paper_list[[paper]]$Evidence.of.engagement, '\\,|\\;|\\, | \\; ')
+  paper_list[[paper]]$Perspective.on.the.community <- strsplit(paper_list[[paper]]$Perspective.on.the.community, '\\,|\\;|\\, | \\; ')
+}
+
+```
+
+### Report
+
+Collect countries, continents and categories into vectors
+
+```{r}
+country_author <- c()
+continent_author <- c()
+country_study <- c()
+engagement <- c()
+perspective <- c()
+
+# For all paper insert combine vectors. Also trim leading whitespaces introduced by the lazy regex
+for (paper in seq_along(paper_list)) {
+#  print(paste(paper, trimws(paper_list[[paper]]$study_area_country_fix[[1]])))
+ country_author <- c(country_author, trimws(paper_list[[paper]]$Authors..Geography..countries[[1]]))
+ continent_author <- c(continent_author, trimws(paper_list[[paper]]$Authors..Geography..continents.[[1]]))
+ country_study <- c(country_study, trimws(paper_list[[paper]]$Study.Area.Geography..countries.[[1]]))
+ engagement <- c(engagement, trimws(paper_list[[paper]]$Evidence.of.engagement[[1]]))
+ perspective <- c(perspective, trimws(paper_list[[paper]]$Perspective.on.the.community[[1]]))
+}
+
+```
+
+Some countries do not match the Natural Earth data. Correct them manually for now
+
+```{r}
+# Load Natural Earth data
+world <- ne_countries(scale = "medium", returnclass = "sf")
+
+# Check which countries can't be matched to Natural Earth (TODO: fix them in the spreadsheet)
+unique(country_author)[unique(country_author) %in% world$admin == F]
+unique(country_study)[unique(country_study) %in% world$admin == F]
+
+
+# Fix them manually
+country_author <- replace(country_author, country_author == 'Serbia', 'Republic of Serbia')
+country_author <- replace(country_author, country_author == 'Hong Kong', 'Hong Kong S.A.R.')
+country_author <- replace(country_author, country_author == 'United States', 'United States of America')
+
+country_study <- replace(country_study, country_study == 'Serbia', 'Republic of Serbia')
+country_study <- replace(country_study, country_study == 'United States', 'United States of America')
+country_study <- replace(country_study, country_study == 'Hong Kong', 'Hong Kong S.A.R.')
+country_study <- replace(country_study, country_study == 'Tanzania', 'United Republic of Tanzania')
+country_study <- replace(country_study, country_study == 'Madgascar', 'Madagascar')
+
+for (paper in seq_along(paper_list)) {
+  paper_list[[paper]]$Authors..Geography..countries.[[1]] <-  replace(paper_list[[paper]]$Authors..Geography..countries.[[1]], paper_list[[paper]]$Authors..Geography..countries.[[1]] == 'Serbia', 'Republic of Serbia')
+  paper_list[[paper]]$Authors..Geography..countries.[[1]] <-  replace(paper_list[[paper]]$Authors..Geography..countries.[[1]], paper_list[[paper]]$Authors..Geography..countries.[[1]] == 'Hong Kong', 'Hong Kong S.A.R.')
+  paper_list[[paper]]$Authors..Geography..countries.[[1]] <-  replace(paper_list[[paper]]$Authors..Geography..countries.[[1]], paper_list[[paper]]$Authors..Geography..countries.[[1]] == 'United States', 'United States of America')
+  
+  paper_list[[paper]]$Study.Area.Geography..countries.[[1]] <-  replace(paper_list[[paper]]$Study.Area.Geography..countries.[[1]], paper_list[[paper]]$Study.Area.Geography..countries.[[1]] == 'United States', 'United States of America')
+  paper_list[[paper]]$Study.Area.Geography..countries.[[1]] <-  replace(paper_list[[paper]]$Study.Area.Geography..countries.[[1]], paper_list[[paper]]$Study.Area.Geography..countries.[[1]] == 'Serbia', 'Republic of Serbia')
+  paper_list[[paper]]$Study.Area.Geography..countries.[[1]] <-  replace(paper_list[[paper]]$Study.Area.Geography..countries.[[1]], paper_list[[paper]]$Study.Area.Geography..countries.[[1]] == 'Tanzania', 'United Republic of Tanzania')
+  paper_list[[paper]]$Study.Area.Geography..countries.[[1]] <-  replace(paper_list[[paper]]$Study.Area.Geography..countries.[[1]], paper_list[[paper]]$Study.Area.Geography..countries.[[1]] == 'Hong Kong', 'Hong Kong S.A.R.')
+  paper_list[[paper]]$Study.Area.Geography..countries.[[1]] <-  replace(paper_list[[paper]]$Study.Area.Geography..countries.[[1]], paper_list[[paper]]$Study.Area.Geography..countries.[[1]] == 'Madgascar', 'Madagascar')
+}
+
+```
+
+#### Create maps
+
+Assign frequencies to countries
+
+```{r}
+# Assign frequencies to countries
+world$country_author <- as.numeric(sapply(world$admin, FUN=function(country) { return(country_author_table[country_author_table$country_author==country,]$Freq)}))
+world$country_study <- as.numeric(sapply(world$admin, FUN=function(country) { return(study_area_table[study_area_table$country_study==country,]$Freq)}))
+
+world$country_author[is.na(world$country_author)] <- 0
+world$country_study[is.na(world$country_study)] <- 0
+
+# Extract centroids for labels
+world_points <- st_centroid(world)
+world_points <- cbind(world, st_coordinates(st_centroid(world$geometry)))
+```
+
+Plot country of authors
+
+```{r, fig.cap="Home countries of authors"}
+png('home_country_authors.png', height=1200, width=2400, unit='px')
+ggplot(data=world) + geom_sf(aes(fill=country_author)) + theme_bw() + coord_sf(crs = "+proj=robin +lon_0=0 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs ") + scale_fill_gradient(low='white', high='red') + ggtitle('Home country of authors') + labs(fill='') + theme(title=element_text(size=36), legend.text=element_text(size=28), legend.key.height=unit(3, 'cm'), panel.grid=element_line(size=2)) 
+dev.off()
+```
+
+Plot study areas (excluding "global")
+
+```{r, fig.cap="Countries receiving the most research attention"}
+png('study_area_country.png', height=1200, width=2400, unit='px')
+
+ggplot(data=world) + geom_sf(aes(fill=country_study)) + theme_bw() + coord_sf(crs = "+proj=robin +lon_0=0 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs ") + scale_fill_gradient(low='white', high='red') + ggtitle('Focus of study') + labs(fill='') + theme(title=element_text(size=36), legend.text=element_text(size=28), legend.key.height=unit(3, 'cm')) 
+dev.off()
+```
+
+Assign focus continent for chord diagram
+
+```{r}
+for (paper in seq_along(paper_list)) {
+  continents <- c()
+  for (country in paper_list[[paper]]$Study.Area.Geography..countries.[[1]]) {
+
+    continents <- unique(c(continents, world[world$admin==country,]$continent))
+    
+    if (!is.na(country) & country == 'Global') {
+      continents <- unique(c(continents, 'Global'))
+     }
+    if (!is.na(country) & country == 'Europe') {
+      continents <- unique(c(continents, 'Europe'))
+    }
+    if (!is.na(country) & country == 'Asia') {
+      continents <- unique(c(continents, 'Asia'))
+    }
+    #if (is.na(country)) {
+    #  continents <- unique(c(continents, 'not applicable'))
+    #}
+  }
+
+  paper_list[[paper]]$Study.Area.Geography..continents. <- list(continents)
+}
+
+study_continent_list <- c()
+global_ids <- c()
+
+fromto <- data.frame(from_continent=character(), to_continent=character(), value=numeric())
+i <- 0
+sum_values <- 0
+for (paper in seq_along(paper_list)) {
+  paper_value <- 0
+  #i <- i + 1
+  for (from_continent in paper_list[[paper]]$Authors..Geography..continents.[[1]]) {
+    if (from_continent=='Australia & Oceania') {
+      from_continent <- 'Oceania'
+    }
+    if (from_continent=='Australia') {
+      from_continent <- 'Oceania'
+    }
+    
+    for (study_continent in paper_list[[paper]]$Study.Area.Geography..continents.[[1]]) {
+      study_continent_list <- c(study_continent_list, study_continent)
+      if (!is.na(study_continent) & study_continent=='Global') {
+        #print(paste(paper_list[[paper]]$id, 'Global'))
+        global_ids <- c(global_ids, paper_list[[paper]]$id)
+        }
+      if (nrow(fromto[fromto$from_continent==from_continent & fromto$study==study_continent,]) == 0) {
+        if (is.na(study_continent)) next
+        fromto <- rbind(fromto, data.frame(from_continent, study_continent, value = 1/length(paper_list[[paper]]$Authors..Geography..continents.[[1]]) / length(paper_list[[paper]]$Study.Area.Geography..continents.[[1]])))
+        ## Check value of one paper
+        paper_value <- paper_value + 1/length(paper_list[[paper]]$Authors..Geography..continents.[[1]]) / length(paper_list[[paper]]$Study.Area.Geography..continents.[[1]])
+        sum_values <- sum_values +   1/length(paper_list[[paper]]$Authors..Geography..continents.[[1]]) / length(paper_list[[paper]]$Study.Area.Geography..continents.[[1]])
+      } else {
+        if (is.na(study_continent)) next
+        fromto[fromto$from_continent==from_continent & fromto$study==study_continent,]$value <- fromto[fromto$from_continent==from_continent & fromto$study==study_continent,]$value + 1/length(paper_list[[paper]]$Authors..Geography..continents.[[1]]) / length(paper_list[[paper]]$Study.Area.Geography..continents.[[1]])
+        paper_value <- paper_value + 1/length(paper_list[[paper]]$Authors..Geography..continents.[[1]]) / length(paper_list[[paper]]$Study.Area.Geography..continents.[[1]])
+        sum_values <- sum_values +   1/length(paper_list[[paper]]$Authors..Geography..continents.[[1]]) / length(paper_list[[paper]]$Study.Area.Geography..continents.[[1]])
+      }
+    }
+  }
+  i <- i + paper_value
+}
+
+fromto$from_continent <- as.character(fromto$from_continent)
+fromto$from_continent <-  replace(fromto$from_continent, fromto$from_continent == 'Australia & Oceania', 'Oceania')
+fromto$from_continent <-  replace(fromto$from_continent, fromto$from_continent == 'Australia', 'Oceania')
+
+
+fromto <- fromto[!(fromto$from_continent=='not applicable' | fromto$study_continent=='not applicable'), ]
+
+fromto
+```
+
+```{r}
+svg('from_to_studies_directional.svg')#, pointsize=12)
+
+chordDiagram(fromto, grid.col=brewer.pal(7, 'Set1'), annotationTrack = "grid", preAllocateTracks = 1, directional=1, direction.type=c('arrows','diffHeight'), diffHeight = 0.05, link.sort = TRUE, link.largest.ontop = TRUE, target.prop.height=2)
+circos.trackPlotRegion(track.index = 1, panel.fun = function(x, y) {
+  xlim = get.cell.meta.data("xlim")
+  ylim = get.cell.meta.data("ylim")
+  sector.name = get.cell.meta.data("sector.index")
+  circos.text(mean(xlim), ylim[1] + 2, sector.name, cex=2.5, facing = "clockwise", niceFacing = TRUE, adj = c(0, 0.5))
+  circos.axis(h = "top", labels.cex = 0.5, major.tick.length = 3, sector.index = sector.name, track.index = 2)
+}, bg.border = NA)
+dev.off()
+```
