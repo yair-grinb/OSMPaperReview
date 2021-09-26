@@ -1,8 +1,12 @@
 import pandas as pd
 import itertools
 import operator
+from os import listdir, mkdir
 
 inp_file = 'OSM_Paper_Review.csv'
+
+if 'OutputTables' not in listdir():
+    mkdir('OutputTables')
 
 # read file and remove unincluded papers
 df = pd.read_csv(inp_file)
@@ -93,7 +97,7 @@ for i in counts:
                         'papers': counts[i], 
                         '%': round(counts[i]*100/df.shape[0], 1)},
                        ignore_index=True)
-tab3.to_csv('Table3.csv')
+tab3.to_csv('OutputTables/Table3.csv')
 
 # statistics for text
 # 1. number of papers by number of authors' disciplines
@@ -157,7 +161,7 @@ for c1 in range(len(indices)-1):
                 for j in row[columns[indices[c2]]]:
                     data.append([i,j])
         temp_df = pd.DataFrame(data, columns=[columns[indices[c1]], columns[indices[c2]]])
-        temp_df.to_csv('Alluvial_'+columns[indices[c1]]+'_'+columns[indices[c2]]+'.csv')
+        temp_df.to_csv('OutputTables/Alluvial_'+columns[indices[c1]]+'_'+columns[indices[c2]]+'.csv')
 
 # create Alluvial diagrams files for the geographic correspondence variable
 for c2 in indices:
@@ -166,4 +170,4 @@ for c2 in indices:
         for i in row[columns[c2]]:
             data.append([row[columns[-2]], i])
     temp_df = pd.DataFrame(data, columns=[columns[-2], columns[c2]])
-    temp_df.to_csv('Alluvial_'+columns[-2]+'_'+columns[c2]+'.csv')
+    temp_df.to_csv('OutputTables/Alluvial_'+columns[-2]+'_'+columns[c2]+'.csv')

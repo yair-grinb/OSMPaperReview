@@ -1,0 +1,256 @@
+,Geographic Correspondence,Topics
+0,partial/partial,application
+1,no,contribution behaviors
+2,full,data quality
+3,full,data quality
+4,full,data enrichment
+5,full,development
+6,partial/full,data quality
+7,full,data quality
+8,no,development
+9,no,review
+10,no,analyzing contributions
+11,no,development
+12,no,data quality
+13,NA,analyzing contributions
+14,no,data quality
+15,partial/full,data quality
+16,partial/partial,application
+17,no,application
+18,NA,application
+19,NA,data enrichment
+20,NA,development
+21,partial/full,data quality
+22,partial/full,development
+23,NA,contribution behaviors
+24,NA,analyzing contributions
+25,no,contribution behaviors
+26,no,contribution behaviors
+27,NA,contribution behaviors
+28,full,development
+29,no,analyzing contributions
+30,no,contributors
+31,NA,development
+32,full,application
+33,full,data quality
+34,no,data quality
+35,full,data quality
+36,partial/full,data quality
+37,full,data quality
+38,full,application
+39,no,contribution behaviors
+40,no,analyzing contributions
+41,no,contributors
+42,no,application
+43,no,data enrichment
+44,full,data enrichment
+45,full,application
+46,full,application
+47,partial/partial,application
+48,partial/partial,data enrichment
+49,partial/partial,development
+50,full,data quality
+51,full,data quality
+52,full,contributors
+53,no,analyzing contributions
+54,partial/partial,analyzing contributions
+55,partial/partial,contribution behaviors
+56,full,data quality
+57,no,application
+58,full,application
+59,no,development
+60,full,data quality
+61,full,data quality
+62,full,data quality
+63,partial/full,data quality
+64,full,application
+65,partial/full,application
+66,no,data quality
+67,no,application
+68,partial/partial,application
+69,no,application
+70,no,development
+71,no,application
+72,no,application
+73,no,contribution behaviors
+74,NA,contribution behaviors
+75,no,contributors
+76,full,application
+77,full,development
+78,partial/partial,application
+79,NA,development
+80,full,data quality
+81,full,contribution behaviors
+82,full,contribution behaviors
+83,no,shaping contributions
+84,no,data quality
+85,no,application
+86,partial/full,application
+87,NA,development
+88,no,data quality
+89,partial/partial,development
+90,no,application
+91,full,contribution behaviors
+92,full,analyzing contributions
+93,full,contributors
+94,no,analyzing contributions
+95,no,contribution behaviors
+96,full,application
+97,NA,review
+98,NA,data quality
+99,full,application
+100,no,application
+101,no,application
+102,no,contribution behaviors
+103,no,contributors
+104,NA,development
+105,partial/full,application
+106,no,contributors
+107,partial/full,application
+108,full,application
+109,partial/full,application
+110,full,application
+111,full,application
+112,full,data enrichment
+113,full,data enrichment
+114,partial/full,data enrichment
+115,partial/full,application
+116,partial/partial,data quality
+117,NA,review
+118,NA,OSM effects
+119,no,development
+120,no,analyzing contributions
+121,NA,analyzing contributions
+122,no,application
+123,NA,review
+124,partial/full,data quality
+125,partial/full,contribution behaviors
+126,partial/full,analyzing contributions
+127,full,shaping contributions
+128,NA,data enrichment
+129,partial/full,data quality
+130,partial/partial,application
+131,partial/full,data quality
+132,partial/full,contribution behaviors
+133,partial/full,analyzing contributions
+134,partial/full,development
+135,full,application
+136,partial/full,application
+137,no,application
+138,no,contributors
+139,no,analyzing contributions
+140,no,analyzing contributions
+141,no,contributors
+142,no,application
+143,no,analyzing contributions
+144,no,contribution behaviors
+145,partial/partial,contribution behaviors
+146,partial/partial,contributors
+147,partial/partial,contribution behaviors
+148,partial/partial,development
+149,full,shaping contributions
+150,NA,analyzing contributions
+151,no,application
+152,no,review
+153,no,data quality
+154,no,application
+155,NA,shaping contributions
+156,NA,development
+157,no,application
+158,full,application
+159,full,application
+160,full,development
+161,partial/full,application
+162,full,data quality
+163,full,development
+164,full,data quality
+165,NA,review
+166,NA,shaping contributions
+167,NA,analyzing contributions
+168,full,application
+169,full,OSM effects
+170,full,shaping contributions
+171,partial/partial,data quality
+172,no,application
+173,full,application
+174,full,OSM effects
+175,full,contribution behaviors
+176,full,application
+177,full,application
+178,full,analyzing contributions
+179,full,analyzing contributions
+180,full,application
+181,full,contributors
+182,full,analyzing contributions
+183,full,data quality
+184,full,contribution behaviors
+185,full,analyzing contributions
+186,no,application
+187,no,data enrichment
+188,full,application
+189,full,application
+190,no,application
+191,partial/full,application
+192,full,application
+193,no,application
+194,NA,data quality
+195,NA,data enrichment
+196,full,application
+197,full,data quality
+198,partial/partial,contributors
+199,partial/partial,analyzing contributions
+200,partial/partial,contributors
+201,no,application
+202,partial/full,application
+203,full,data quality
+204,full,data quality
+205,full,review
+206,partial/full,application
+207,partial/full,application
+208,no,application
+209,no,data quality
+210,partial/partial,data quality
+211,partial/partial,application
+212,partial/partial,data enrichment
+213,NA,analyzing contributions
+214,NA,shaping contributions
+215,partial/partial,development
+216,full,application
+217,full,data enrichment
+218,no,application
+219,partial/full,data enrichment
+220,no,contributors
+221,no,analyzing contributions
+222,no,OSM effects
+223,partial/full,data enrichment
+224,full,application
+225,no,data quality
+226,partial/partial,application
+227,no,application
+228,no,shaping contributions
+229,no,contributors
+230,partial/partial,shaping contributions
+231,partial/partial,data quality
+232,full,application
+233,partial/partial,application
+234,full,data quality
+235,partial/partial,application
+236,partial/partial,application
+237,no,application
+238,no,review
+239,partial/partial,data quality
+240,partial/partial,development
+241,full,data enrichment
+242,full,data quality
+243,partial/partial,application
+244,full,application
+245,NA,contributors
+246,NA,contribution behaviors
+247,partial/full,data quality
+248,full,application
+249,no,application
+250,NA,application
+251,partial/partial,application
+252,partial/partial,application
+253,partial/full,application
+254,partial/full,contribution behaviors

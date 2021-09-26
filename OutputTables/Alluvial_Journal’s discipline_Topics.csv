@@ -1,0 +1,256 @@
+,Journal’s discipline,Topics
+0,computer science,application
+1,geo-information,contribution behaviors
+2,engineering,data quality
+3,geo-information,data quality
+4,geo-information,data enrichment
+5,geo-information,development
+6,geo-information,data quality
+7,geo-information,data quality
+8,computer science,development
+9,computer science,review
+10,geo-information,analyzing contributions
+11,informatics,development
+12,informatics,data quality
+13,geo-information,analyzing contributions
+14,geo-information,data quality
+15,geo-information,data quality
+16,computer science,application
+17,informatics,application
+18,social sciences,application
+19,informatics,data enrichment
+20,informatics,development
+21,geo-information,data quality
+22,geo-information,development
+23,geo-information,contribution behaviors
+24,geo-information,analyzing contributions
+25,geo-information,contribution behaviors
+26,geo-information,contribution behaviors
+27,geo-information,contribution behaviors
+28,geo-information,development
+29,social sciences,analyzing contributions
+30,social sciences,contributors
+31,computer science,development
+32,informatics,application
+33,social sciences,data quality
+34,geo-information,data quality
+35,geo-information,data quality
+36,geo-information,data quality
+37,geo-information,data quality
+38,geo-information,application
+39,social sciences,contribution behaviors
+40,social sciences,analyzing contributions
+41,social sciences,contributors
+42,interdisciplinary,application
+43,geo-information,data enrichment
+44,social sciences,data enrichment
+45,social sciences,application
+46,geo-information,application
+47,computer science,application
+48,computer science,data enrichment
+49,computer science,development
+50,exact sciences,data quality
+51,geo-information,data quality
+52,computer science,contributors
+53,geo-information,analyzing contributions
+54,geo-information,analyzing contributions
+55,geo-information,contribution behaviors
+56,geo-information,data quality
+57,geo-information,application
+58,interdisciplinary,application
+59,informatics,development
+60,geo-information,data quality
+61,geo-information,data quality
+62,geo-information,data quality
+63,interdisciplinary,data quality
+64,computer science,application
+65,interdisciplinary,application
+66,geo-information,data quality
+67,geo-information,application
+68,geo-information,application
+69,geo-information,application
+70,geo-information,development
+71,geo-information,application
+72,geo-information,application
+73,geo-information,contribution behaviors
+74,geo-information,contribution behaviors
+75,geo-information,contributors
+76,interdisciplinary,application
+77,geo-information,development
+78,geo-information,application
+79,social sciences,development
+80,geo-information,data quality
+81,geo-information,contribution behaviors
+82,interdisciplinary,contribution behaviors
+83,interdisciplinary,shaping contributions
+84,geo-information,data quality
+85,geo-information,application
+86,geo-information,application
+87,interdisciplinary,development
+88,interdisciplinary,data quality
+89,interdisciplinary,development
+90,social sciences,application
+91,geo-information,contribution behaviors
+92,geo-information,analyzing contributions
+93,geo-information,contributors
+94,geo-information,analyzing contributions
+95,geo-information,contribution behaviors
+96,interdisciplinary,application
+97,computer science,review
+98,computer science,data quality
+99,informatics,application
+100,geo-information,application
+101,geo-information,application
+102,interdisciplinary,contribution behaviors
+103,interdisciplinary,contributors
+104,social sciences,development
+105,geo-information,application
+106,social sciences,contributors
+107,exact sciences,application
+108,social sciences,application
+109,geo-information,application
+110,geo-information,application
+111,geo-information,application
+112,geo-information,data enrichment
+113,informatics,data enrichment
+114,informatics,data enrichment
+115,interdisciplinary,application
+116,geo-information,data quality
+117,geo-information,review
+118,geo-information,OSM effects
+119,geo-information,development
+120,geo-information,analyzing contributions
+121,geo-information,analyzing contributions
+122,exact sciences,application
+123,geo-information,review
+124,geo-information,data quality
+125,geo-information,contribution behaviors
+126,geo-information,analyzing contributions
+127,social sciences,shaping contributions
+128,computer science,data enrichment
+129,geo-information,data quality
+130,social sciences,application
+131,informatics,data quality
+132,informatics,contribution behaviors
+133,informatics,analyzing contributions
+134,informatics,development
+135,informatics,application
+136,geo-information,application
+137,interdisciplinary,application
+138,social sciences,contributors
+139,social sciences,analyzing contributions
+140,informatics,analyzing contributions
+141,informatics,contributors
+142,informatics,application
+143,interdisciplinary,analyzing contributions
+144,geo-information,contribution behaviors
+145,social sciences,contribution behaviors
+146,social sciences,contributors
+147,geo-information,contribution behaviors
+148,geo-information,development
+149,social sciences,shaping contributions
+150,geo-information,analyzing contributions
+151,engineering,application
+152,engineering,review
+153,engineering,data quality
+154,geo-information,application
+155,geo-information,shaping contributions
+156,geo-information,development
+157,geo-information,application
+158,geo-information,application
+159,interdisciplinary,application
+160,interdisciplinary,development
+161,geo-information,application
+162,informatics,data quality
+163,informatics,development
+164,informatics,data quality
+165,geo-information,review
+166,computer science,shaping contributions
+167,computer science,analyzing contributions
+168,geo-information,application
+169,interdisciplinary,OSM effects
+170,geo-information,shaping contributions
+171,interdisciplinary,data quality
+172,geo-information,application
+173,computer science,application
+174,exact sciences,OSM effects
+175,exact sciences,contribution behaviors
+176,social sciences,application
+177,engineering,application
+178,computer science,analyzing contributions
+179,geo-information,analyzing contributions
+180,interdisciplinary,application
+181,geo-information,contributors
+182,geo-information,analyzing contributions
+183,geo-information,data quality
+184,geo-information,contribution behaviors
+185,geo-information,analyzing contributions
+186,geo-information,application
+187,geo-information,data enrichment
+188,engineering,application
+189,geo-information,application
+190,geo-information,application
+191,informatics,application
+192,geo-information,application
+193,interdisciplinary,application
+194,geo-information,data quality
+195,geo-information,data enrichment
+196,geo-information,application
+197,geo-information,data quality
+198,geo-information,contributors
+199,geo-information,analyzing contributions
+200,geo-information,contributors
+201,geo-information,application
+202,geo-information,application
+203,geo-information,data quality
+204,geo-information,data quality
+205,geo-information,review
+206,interdisciplinary,application
+207,geo-information,application
+208,informatics,application
+209,geo-information,data quality
+210,geo-information,data quality
+211,geo-information,application
+212,geo-information,data enrichment
+213,geo-information,analyzing contributions
+214,geo-information,shaping contributions
+215,computer science,development
+216,geo-information,application
+217,geo-information,data enrichment
+218,geo-information,application
+219,computer science,data enrichment
+220,geo-information,contributors
+221,geo-information,analyzing contributions
+222,geo-information,OSM effects
+223,computer science,data enrichment
+224,geo-information,application
+225,geo-information,data quality
+226,engineering,application
+227,engineering,application
+228,informatics,shaping contributions
+229,informatics,contributors
+230,geo-information,shaping contributions
+231,geo-information,data quality
+232,geo-information,application
+233,geo-information,application
+234,geo-information,data quality
+235,geo-information,application
+236,geo-information,application
+237,geo-information,application
+238,geo-information,review
+239,geo-information,data quality
+240,geo-information,development
+241,informatics,data enrichment
+242,informatics,data quality
+243,geo-information,application
+244,geo-information,application
+245,geo-information,contributors
+246,geo-information,contribution behaviors
+247,geo-information,data quality
+248,engineering,application
+249,interdisciplinary,application
+250,geo-information,application
+251,geo-information,application
+252,engineering,application
+253,geo-information,application
+254,geo-information,contribution behaviors

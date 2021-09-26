@@ -1,0 +1,59 @@
+,variable,value,papers,%
+0,Authors’ disciplines,computer science,49,24.5
+1,Authors’ disciplines,social sciences,45,22.5
+2,Authors’ disciplines,geo-information,95,47.5
+3,Authors’ disciplines,engineering,56,28.0
+4,Authors’ disciplines,interdisciplinary,10,5.0
+5,Authors’ disciplines,informatics,25,12.5
+6,Authors’ disciplines,exact sciences,20,10.0
+7,Journal’s discipline,computer science,15,7.5
+8,Journal’s discipline,geo-information,116,58.0
+9,Journal’s discipline,engineering,8,4.0
+10,Journal’s discipline,informatics,19,9.5
+11,Journal’s discipline,social sciences,16,8.0
+12,Journal’s discipline,interdisciplinary,22,11.0
+13,Journal’s discipline,exact sciences,4,2.0
+14,Topics,application,85,42.5
+15,Topics,contribution behaviors,23,11.5
+16,Topics,data quality,46,23.0
+17,Topics,data enrichment,16,8.0
+18,Topics,development,23,11.5
+19,Topics,review,8,4.0
+20,Topics,analyzing contributions,25,12.5
+21,Topics,contributors,16,8.0
+22,Topics,shaping contributions,9,4.5
+23,Topics,OSM effects,4,2.0
+24,Authors' Geography (continents),Asia,50,25.0
+25,Authors' Geography (continents),Europe,126,63.0
+26,Authors' Geography (continents),North America,43,21.5
+27,Authors' Geography (continents),Africa,4,2.0
+28,Authors' Geography (continents),Australia & Oceania,5,2.5
+29,Authors' Geography (continents),South America,6,3.0
+30,Perspective on the community,data produced by contributors,57,28.5
+31,Perspective on the community,contributors producing data,28,14.0
+32,Perspective on the community,OSM as a data source,74,37.0
+33,Perspective on the community,a diverse community,7,3.5
+34,Perspective on the community,a social product,20,10.0
+35,Perspective on the community,a unified community,5,2.5
+36,Perspective on the community,a collaborative project based on contributors,9,4.5
+37,Evidence of engagement,none,110,55.0
+38,Evidence of engagement,object of study - indirect,30,15.0
+39,Evidence of engagement,contribution,16,8.0
+40,Evidence of engagement,acknowledgement,24,12.0
+41,Evidence of engagement,meaningful development,17,8.5
+42,Evidence of engagement,occasional development,24,12.0
+43,Evidence of engagement,object of study - direct,12,6.0
+44,Evidence of engagement,participation,3,1.5
+45,Study Area Geography (continent),Australia & Oceania,12,6.0
+46,Study Area Geography (continent),Europe,91,45.5
+47,Study Area Geography (continent),Asia,52,26.0
+48,Study Area Geography (continent),North America,33,16.5
+49,Study Area Geography (continent),Global,13,6.5
+50,Study Area Geography (continent),None,23,11.5
+51,Study Area Geography (continent),South America,10,5.0
+52,Study Area Geography (continent),Africa,15,7.5
+53,Geographic Correspondence,full,65,32.5
+54,Geographic Correspondence,no,60,30.0
+55,Geographic Correspondence,partial/partial,27,13.5
+56,Geographic Correspondence,partial/full,25,12.5
+57,Geographic Correspondence,NA,23,11.5

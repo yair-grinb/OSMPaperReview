@@ -1,0 +1,301 @@
+,Geographic Correspondence,Authors’ disciplines
+0,partial/partial,computer science
+1,partial/partial,social sciences
+2,no,geo-information
+3,full,engineering
+4,full,interdisciplinary
+5,partial/full,informatics
+6,partial/full,geo-information
+7,full,informatics
+8,no,informatics
+9,no,computer science
+10,no,social sciences
+11,no,informatics
+12,no,computer science
+13,no,informatics
+14,no,social sciences
+15,no,geo-information
+16,no,interdisciplinary
+17,NA,geo-information
+18,NA,engineering
+19,no,geo-information
+20,no,interdisciplinary
+21,partial/full,geo-information
+22,partial/partial,informatics
+23,partial/partial,engineering
+24,no,geo-information
+25,NA,informatics
+26,NA,geo-information
+27,NA,computer science
+28,partial/full,geo-information
+29,partial/full,computer science
+30,partial/full,engineering
+31,NA,social sciences
+32,NA,geo-information
+33,no,geo-information
+34,no,social sciences
+35,no,geo-information
+36,NA,geo-information
+37,full,geo-information
+38,no,social sciences
+39,NA,social sciences
+40,full,computer science
+41,full,interdisciplinary
+42,full,social sciences
+43,no,engineering
+44,no,geo-information
+45,full,engineering
+46,partial/full,engineering
+47,partial/full,computer science
+48,full,geo-information
+49,full,geo-information
+50,no,social sciences
+51,no,geo-information
+52,no,computer science
+53,full,engineering
+54,full,exact sciences
+55,partial/partial,engineering
+56,full,exact sciences
+57,full,engineering
+58,full,exact sciences
+59,full,geo-information
+60,full,computer science
+61,no,engineering
+62,no,computer science
+63,partial/partial,computer science
+64,partial/partial,engineering
+65,partial/partial,engineering
+66,partial/partial,computer science
+67,full,geo-information
+68,no,engineering
+69,no,computer science
+70,full,informatics
+71,full,geo-information
+72,full,social sciences
+73,no,geo-information
+74,no,interdisciplinary
+75,full,engineering
+76,full,geo-information
+77,full,geo-information
+78,full,informatics
+79,partial/full,social sciences
+80,partial/full,geo-information
+81,full,computer science
+82,partial/full,exact sciences
+83,partial/full,informatics
+84,partial/full,social sciences
+85,no,geo-information
+86,no,exact sciences
+87,partial/partial,exact sciences
+88,partial/partial,engineering
+89,partial/partial,geo-information
+90,partial/partial,computer science
+91,no,engineering
+92,no,exact sciences
+93,no,informatics
+94,no,geo-information
+95,no,computer science
+96,no,geo-information
+97,no,engineering
+98,no,exact sciences
+99,no,social sciences
+100,no,geo-information
+101,no,computer science
+102,NA,geo-information
+103,NA,computer science
+104,NA,social sciences
+105,no,social sciences
+106,no,computer science
+107,full,computer science
+108,full,geo-information
+109,partial/partial,exact sciences
+110,NA,social sciences
+111,full,engineering
+112,full,geo-information
+113,full,computer science
+114,full,social sciences
+115,no,geo-information
+116,no,geo-information
+117,partial/full,geo-information
+118,partial/full,engineering
+119,NA,social sciences
+120,no,geo-information
+121,partial/partial,computer science
+122,no,exact sciences
+123,full,geo-information
+124,no,geo-information
+125,no,geo-information
+126,full,engineering
+127,NA,computer science
+128,full,engineering
+129,no,social sciences
+130,no,geo-information
+131,no,social sciences
+132,no,computer science
+133,NA,social sciences
+134,partial/full,engineering
+135,no,social sciences
+136,partial/full,exact sciences
+137,full,social sciences
+138,partial/full,exact sciences
+139,partial/full,geo-information
+140,full,geo-information
+141,full,engineering
+142,full,geo-information
+143,full,exact sciences
+144,full,geo-information
+145,full,geo-information
+146,partial/full,geo-information
+147,partial/full,computer science
+148,partial/full,geo-information
+149,partial/full,informatics
+150,partial/partial,geo-information
+151,NA,geo-information
+152,no,geo-information
+153,NA,social sciences
+154,no,engineering
+155,no,exact sciences
+156,no,informatics
+157,NA,geo-information
+158,partial/full,geo-information
+159,full,social sciences
+160,NA,computer science
+161,partial/full,engineering
+162,partial/full,geo-information
+163,partial/partial,informatics
+164,partial/full,geo-information
+165,partial/full,engineering
+166,full,geo-information
+167,partial/full,geo-information
+168,partial/full,social sciences
+169,no,computer science
+170,no,social sciences
+171,no,computer science
+172,no,geo-information
+173,no,social sciences
+174,no,informatics
+175,no,computer science
+176,no,geo-information
+177,no,social sciences
+178,partial/partial,social sciences
+179,partial/partial,social sciences
+180,full,social sciences
+181,NA,geo-information
+182,NA,computer science
+183,no,engineering
+184,no,social sciences
+185,NA,geo-information
+186,no,geo-information
+187,full,geo-information
+188,full,engineering
+189,partial/full,geo-information
+190,full,interdisciplinary
+191,full,computer science
+192,full,engineering
+193,full,computer science
+194,full,engineering
+195,NA,computer science
+196,NA,engineering
+197,NA,computer science
+198,NA,engineering
+199,full,geo-information
+200,full,engineering
+201,full,computer science
+202,full,social sciences
+203,full,computer science
+204,partial/partial,computer science
+205,no,geo-information
+206,no,computer science
+207,full,computer science
+208,full,geo-information
+209,full,social sciences
+210,full,engineering
+211,full,computer science
+212,full,informatics
+213,full,geo-information
+214,full,geo-information
+215,full,geo-information
+216,full,informatics
+217,full,geo-information
+218,full,informatics
+219,no,exact sciences
+220,no,geo-information
+221,no,computer science
+222,full,social sciences
+223,full,geo-information
+224,full,informatics
+225,no,computer science
+226,no,engineering
+227,partial/full,geo-information
+228,partial/full,informatics
+229,full,geo-information
+230,no,interdisciplinary
+231,NA,social sciences
+232,NA,geo-information
+233,full,computer science
+234,full,engineering
+235,full,social sciences
+236,partial/partial,geo-information
+237,partial/partial,engineering
+238,partial/partial,geo-information
+239,partial/partial,engineering
+240,no,social sciences
+241,partial/full,social sciences
+242,partial/full,exact sciences
+243,full,social sciences
+244,full,computer science
+245,full,social sciences
+246,partial/full,social sciences
+247,partial/full,geo-information
+248,partial/full,geo-information
+249,partial/full,engineering
+250,partial/full,exact sciences
+251,no,engineering
+252,no,geo-information
+253,partial/partial,informatics
+254,partial/partial,exact sciences
+255,partial/partial,computer science
+256,partial/partial,geo-information
+257,NA,engineering
+258,partial/partial,informatics
+259,full,engineering
+260,full,geo-information
+261,no,geo-information
+262,no,exact sciences
+263,partial/full,engineering
+264,no,geo-information
+265,partial/full,geo-information
+266,full,computer science
+267,no,geo-information
+268,partial/partial,informatics
+269,no,engineering
+270,no,engineering
+271,partial/partial,computer science
+272,partial/partial,engineering
+273,full,engineering
+274,partial/partial,informatics
+275,partial/partial,interdisciplinary
+276,full,engineering
+277,partial/partial,geo-information
+278,partial/partial,geo-information
+279,no,geo-information
+280,no,geo-information
+281,partial/partial,geo-information
+282,partial/partial,engineering
+283,full,engineering
+284,partial/partial,computer science
+285,partial/partial,exact sciences
+286,partial/partial,interdisciplinary
+287,partial/partial,informatics
+288,full,social sciences
+289,NA,social sciences
+290,NA,geo-information
+291,partial/full,computer science
+292,partial/full,engineering
+293,full,engineering
+294,no,engineering
+295,NA,geo-information
+296,partial/partial,geo-information
+297,partial/partial,engineering
+298,partial/full,engineering
+299,partial/full,interdisciplinary
