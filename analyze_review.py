@@ -163,6 +163,17 @@ for c1 in range(len(indices)-1):
         temp_df = pd.DataFrame(data, columns=[columns[indices[c1]], columns[indices[c2]]])
         temp_df.to_csv('OutputTables/Alluvial_'+columns[indices[c1]]+'_'+columns[indices[c2]]+'.csv')
 
+# create author-continent study-area-continent table
+data = []
+for idx, row in df.iterrows():
+    for i in row["Authors' Geography (continents)"]:
+        for j in row['Study Area Geography (continent)']:
+            data.append([i,j])
+temp_df = pd.DataFrame(data, columns=["Authors' Geography (continents)", 'Study Area Geography (continent)'])
+frequencies = temp_df.groupby([temp_df.columns[0], temp_df.columns[1]]).size().reset_index()
+piv = frequencies.pivot("Authors' Geography (continents)", 'Study Area Geography (continent)').fillna(0)
+piv.to_csv('OutputTables/author_study area_continents.csv')
+
 # create Alluvial diagrams files for the geographic correspondence variable
 for c2 in indices:
     data = []
